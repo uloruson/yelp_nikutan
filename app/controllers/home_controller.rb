@@ -27,7 +27,7 @@ class HomeController < ApplicationController
   def insert
     # food_words  = [ 'Yakiniku', '焼肉', 'Sukiyaki', 'ステーキ', 'もつ鍋', 'Yakitori', 'Steakhouses']
     food_words  = [ '焼肉']
-    # place_words = [ '大阪市 港区', '大阪市 此花区', '大阪市 西区','6511354' ]
+    # place_words = [ '大阪市 港区', '大阪市 此花区', '大阪市 西区' ]
     place_words = [ '大阪駅' ]
 
     food_words.each do |food_word|
