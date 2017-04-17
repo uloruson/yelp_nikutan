@@ -1,0 +1,203 @@
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+
+$main-color:#AB3B3A;
+$accent-color:adjust-hue(#AB3B3A,200);
+$font-size:18px;
+
+@mixin ts-black($op:.3) {
+  text-shadow: 2px -2px rgba(0, 0, 0, $op);
+}
+
+body{
+  font-family: "Hannari";
+  margin: 0;
+}
+header{
+  z-index: 100;
+  width:100%;
+  // height: 70px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000;
+    background-color: $main-color;
+
+    padding: 0px 20px;
+    .headLog{
+      letter-spacing: 0.1em;
+      display: inline-block;
+      list-style: none;
+      color: #fff;
+      font-size: 24px;
+      font-family: 'Fascinate', cursive;
+
+      a{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        vertical-align: bottom;
+      }
+
+      img{
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        padding-right: 0.2em;
+      }
+    }
+    .headSearch{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      dl.search{
+        width: 95%;
+        position:relative;
+        background-color:#fff;
+        -webkit-border-radius:6px;
+        -moz-border-radius:6px;
+        -o-border-radius:6px;
+        -ms-border-radius:6px;
+        border-radius:6px;
+      }
+      #current{
+        display:inline-block;
+      }
+      .icon{
+        color: #fff;
+        font-size: 30px;
+      }
+    }
+  }
+}
+footer{
+  width: 100%;
+  align-items: center;
+  background-color: $main-color;
+  padding: 10px;
+  color: #fff;
+  .container{
+    .footC{
+      font-size: $font-size * 0.75;
+      text-align: center;
+    }
+  }
+}
+.jumbotron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("steak-top_1280.jpg");
+  background-size: cover;
+  height: 100vh;
+  min-height: 450px;
+
+  .container{
+    color: #fff;
+    @include ts-black;
+    img{
+      padding-right: 0.2em;
+      vertical-align: middle;
+    }
+    form{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h1{
+      font-size: 80px;
+      font-family: 'Fascinate', cursive;
+      letter-spacing: 0.2em;
+      margin-left: 0.2em;
+      margin-bottom: 15px;
+      margin-top: auto;
+    }
+
+   p{
+     margin: 1em;
+     letter-spacing: 0.2em;
+     font-size: 20px;
+   }
+   .icon{
+     color: #fff;
+    //  display:inline-block;
+     font-size: 30px;
+     margin: auto 10px;
+     // align-items: center;
+     // width:20px;
+     // height:20px;
+   }
+ }
+}
+dl.search{
+  width: 70%;
+  margin: 10px 5px;
+  position:relative;
+  background-color:#fff;
+  // border:1px solid #aaa;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  -o-border-radius:6px;
+  -ms-border-radius:6px;
+  border-radius:6px;
+}
+dl.search dt{
+  margin-right:40px;
+  padding:1px 2px 2px 3px;
+}
+dl.search dt input{
+  width:100%;
+  height:24px;
+  line-height:24px;
+  background:none;
+  border:none;
+  color: #000;
+  padding: 4px;
+  outline: 0;
+}
+dl.search dd{
+  position:absolute;
+  top:0;
+  right:0;
+}
+dl.search dd button{
+  display:block;
+  padding:10px;
+  background:none;
+  border:none;
+}
+dl.search dd button i{
+  color: #000;
+  display:block;
+  width:20px;
+  height:20px;
+}
+
+.info{
+  padding: 5px;
+  .info-title{
+    font-size: $font-size;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDD;
+    p{
+      font-size: $font-size * 0.75;
+      padding-right: 5px;
+    }
+
+  }
+  .info-main{
+    display: flex;
+    align-items: flex-start;
+    .info-img{
+    }
+    .info-des{
+      line-height: 1.5em;
+      letter-spacing: 0.1em;
+      margin: 5px;
+    }
+  }
+}

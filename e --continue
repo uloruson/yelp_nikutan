@@ -1,0 +1,126 @@
+[33mcommit e9d2728ba99ef8ed17b6cbffaf8e663e052a6865[m
+Author: MMM <mmm@server.fake>
+Date:   Mon Apr 17 20:44:07 2017 +0900
+
+    gitgnore exclusion
+
+[33mcommit ef37fc7bb1631d0b6ca1612eec6d69f73a4c4350[m
+Author: MMM <mmm@server.fake>
+Date:   Sat Apr 15 19:47:34 2017 +0900
+
+    Add Column Phone and Re design infowindows
+
+[33mcommit f81a731f399b8a4033ee24e4e2aee7ebf2158043[m
+Author: MMM <mmm@server.fake>
+Date:   Fri Apr 14 23:04:42 2017 +0900
+
+    add business review
+
+[33mcommit 36804d71bc6e0663069c868c818f6a454316e31a[m
+Author: MMM <mmm@server.fake>
+Date:   Fri Apr 14 20:32:31 2017 +0900
+
+    degin change
+
+[33mcommit a4808999760bd04e8d35905372fabe763e4762fa[m
+Author: MMM <mmm@server.fake>
+Date:   Thu Apr 13 00:01:11 2017 +0900
+
+    change degin
+
+[33mcommit 9454616cc6b0139fb9a869e958270325a12a291e[m
+Author: MMM <mmm@server.fake>
+Date:   Mon Apr 10 23:27:28 2017 +0900
+
+    add nav logo
+
+[33mcommit 291222b525f0fc4c900215adea6a0baee66d4ff7[m
+Author: MMM <mmm@server.fake>
+Date:   Mon Apr 10 21:20:03 2017 +0900
+
+    deproy test
+
+[33mcommit 3f31f522fcc1d2be593df4a05029eb7ab983aa7a[m
+Author: MMM <mmm@server.fake>
+Date:   Mon Apr 10 21:17:03 2017 +0900
+
+    deproy test
+
+[33mcommit 0d1370add4ca16db054732029e9b65b9db59a3b2[m
+Author: MMM <mmm@server.fake>
+Date:   Mon Apr 10 20:59:16 2017 +0900
+
+    deproy test
+
+[33mcommit 72097706ba65c72afbfe01d16420aebd4f88273f[m
+Author: MMM <mmm@server.fake>
+Date:   Mon Apr 10 20:45:09 2017 +0900
+
+    deproy
+
+[33mcommit 256643808bdab46f9535c075338f20ff5bbe7a7a[m
+Author: MMM <mmm@server.fake>
+Date:   Mon Apr 10 07:38:31 2017 +0900
+
+    test heroku
+
+[33mcommit 7cce53bb56ed2c28a5ac90dada59e676773e9403[m
+Author: MMM <mmm@server.fake>
+Date:   Tue Apr 4 23:23:00 2017 +0900
+
+    tyousei word
+
+[33mcommit b08e52f991dacd38b1e13b1f8b086dc994d5537a[m
+Author: MMM <mmm@server.fake>
+Date:   Tue Apr 4 23:07:20 2017 +0900
+
+    add webfont and scss
+
+[33mcommit 0ac7ef175fac0e63a152f796993ed085e4237b8c[m
+Merge: 50b8e5c d42a308
+Author: MMM <mmm@server.fake>
+Date:   Tue Apr 4 08:00:22 2017 +0900
+
+    add image
+
+[33mcommit 50b8e5cf72e1ed2834158e225fb14a7de849c441[m
+Author: MMM <mmm@server.fake>
+Date:   Tue Apr 4 07:09:05 2017 +0900
+
+    a
+
+[33mcommit d42a308910c82121556f8195385aa064a7d493ff[m
+Author: MMM <mmm@server.fake>
+Date:   Sun Apr 2 18:57:50 2017 +0900
+
+    add gmap renew
+
+[33mcommit d8ab8a33073c0e23d2eb06ef1b85ec588454e193[m
+Author: MMM <mmm@server.fake>
+Date:   Sun Mar 26 18:09:40 2017 +0900
+
+    Add find_or_create_by and round_box
+
+[33mcommit dbd70bb4d6fe10ab834c862a8102ce7ab87b7d9e[m
+Author: MMM <mmm@server.fake>
+Date:   Sun Mar 26 13:25:34 2017 +0900
+
+    Add redirect and params
+
+[33mcommit 6fb818163885f820c2ea9149bfb2ee479c9d9183[m
+Author: MMM <mmm@server.fake>
+Date:   Sun Mar 26 12:49:36 2017 +0900
+
+    Add TopPage
+
+[33mcommit f86559e9b591802cf3389afef7459d1a33d20880[m
+Author: unknown <山本菜美子>
+Date:   Sun Mar 26 11:51:44 2017 +0900
+
+    add setCenter
+
+[33mcommit eab37fd851cffb83a8516e56855114c95c663512[m
+Author: MMM <mmm@server.fake>
+Date:   Wed Mar 22 07:51:02 2017 +0900
+
+    first commit

@@ -1,0 +1,30 @@
+<section class="jumbotron">
+  <div class="container">
+    <p>近いお肉のお店を探そう！</p>
+    <h1><%= image_tag 'logo-icon.png'%>nikutan</h1>
+    <%= form_tag(search_path, method: "post", name: 'seach') do %>
+      <dl class="search">
+        <dt><%= text_field_tag(:q, "", :placeholder => '駅名や地名を入れてください') %></dt>
+        <dd><button><i class="fa fa-search" aria-hidden="true"></i></button></dd>
+      </dl>
+      <div id="current"></div>
+    <% end %>
+
+  </div>
+</section>
+
+<script type="text/javascript">
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 60000,
+      maximumAge: 0
+    };
+
+    window.navigator.geolocation.getCurrentPosition(success, error, options);
+    function success(pos) {
+      document.getElementById('current').innerHTML = '<a href="/search?q=current' + '&lati=' + pos.coords.latitude + '&long=' + pos.coords.longitude + '"><i class="fa fa-map-marker icon" aria-hidden="true"></i></a>'
+    }
+    function error(err) {
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+    }
+</script>
