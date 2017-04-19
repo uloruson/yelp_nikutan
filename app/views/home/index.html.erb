@@ -17,11 +17,13 @@
   </div>
 </header>
 
-<div style='width: 100%; align-items: center;'>
-  <div id="map" style='width: 100%; height: 84vh;'></div>
+<div style='width: 90%; margin: auto;'>
+  <div id="map" style='width: 100%; height: 84vh; '></div>
 </div>
 
 <script type="text/javascript">
+      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var labelIndex = 0;
       handler = Gmaps.build('Google');
       handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         markers = handler.addMarkers(<%=raw @hash.to_json %>);
@@ -33,6 +35,8 @@
         handler.getMap().setZoom(16);
       });
 </script>
+
+
 <!-- 一覧を非表示
 <% @items.each do |item| %>
   <hr>
@@ -47,6 +51,8 @@
   <hr>
 <% end %>
 -->
+
+
 <footer>
   <div class="container">
     <div class="footC">
