@@ -25,10 +25,10 @@ class HomeController < ApplicationController
   end
 
   def insert
-    food_words  = ['Yakiniku', '焼肉', 'Sukiyaki', 'ステーキ', 'Yakitori']
-    place_words = Postalcode.where(city:'大阪府').pluck(:address)
-    # food_words  = ['焼肉']
-    # place_words = ['大阪駅']
+    # food_words  = ['Yakiniku', 'Sukiyaki', 'Horumon', 'Steakhouses', 'Yakitori']
+    # place_words = Postalcode.where(city:'大阪府').pluck(:address)
+    food_words  = ['焼肉']
+    place_words = ['大阪駅']
 
     food_words.each do |food_word|
       place_words.each do |place_word|
@@ -45,20 +45,24 @@ class HomeController < ApplicationController
       json = JSON.parse(data)
 
       json['businesses'].each do |item|
-        if item['rating'] >= 4 and b_data['business']['is_closed'] == false then #評価が4以上の店　厳選
-          Shop.find_or_create_by(shop_id: item['id']) do |shop|
-            b_json = Yelp.client.business(item['id'], lang: 'ja').to_json
-            b_data = JSON.parse(b_json)
+        if item['rating'] >= 4 and item['is_closed'] == false then #評価が4以上の店　厳選
+          b_json = Yelp.client.business(item['id'], lang: 'ja').to_json
+          b_data = JSON.parse(b_json)
+          # Shop.find_or_create_by(shop_id: item['id']) do |shop|
 
+          # ToDO:ここ未完成　更新と新規の関数がうまく動かない
+          Shop.where(shop_id: item['id']).first_or_create do |shop|
             shop.shop_provider  = 'yelp'
             shop.shop_id        = item['id']
             shop.name           = b_data['business']['name']
             shop.phone          = b_data['business']['phone']
+            shop.review_count   = item['review_count']
             shop.rating         = item['rating']
             shop.rating_img_url = item['rating_img_url']
             shop.description    = b_data['business']['snippet_text']
             shop.url            = item['url']
-            shop.image_url      = item['image_url']
+
+            shop.image_url      = item['image_url'].sub(/ms.jpg/, 'l.jpg')
             shop.postal_code    = item['location']['postal_code']
             shop.city           = item['location']['city']
             shop.address        = item['location']['address'].join

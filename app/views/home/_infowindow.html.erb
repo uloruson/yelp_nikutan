@@ -1,24 +1,35 @@
+<!-- デザイン悩み中 -->
 <div class="info">
   <div class="info-title">
     <%= infoitem.name %>
     <p>
-      〒<%= infoitem.postal_code %>
-      <%= infoitem.city %>
-      <%= infoitem.address %>
+      <%= image_tag infoitem.rating_img_url %>
+      <%= infoitem.review_count %> Reviews
     </p>
   </div>
 
   <div class="info-main">
-    <div class="info-img"><%= image_tag infoitem.image_url %></div>
+    <div class="info-img">
+      <%= image_tag infoitem.image_url %>
+    </div>
+
     <div class="info-des">
       <%= infoitem.description %>
       <%= link_to "詳細はこちら", infoitem.url, target: "_blank" %>
     </div>
   </div>
 
-  <div class="infoaddress">
-    <%= image_tag infoitem.rating_img_url %>
-    <%= infoitem.phone %>
-
+  <div class="info-fotter">
+    <div class="info-address">
+      <p>
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <%= infoitem.postal_code + "　" + infoitem.city + infoitem.address %>
+      </p>
+      <p>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <%= infoitem.phone %>
+      </p>
+    </div>
+    <%= image_tag '/Yelp_trademark_RGB.png', style:"width: 100px;" %>
   </div>
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419111312) do
+ActiveRecord::Schema.define(version: 20170422010750) do
 
   create_table "postalcodes", force: :cascade do |t|
     t.string   "code"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170419111312) do
     t.string   "postal_code"
     t.string   "city"
     t.string   "phone"
+    t.integer  "review_count"
   end
 
   add_index "shops", ["shop_id", "shop_provider"], name: "index_shops_on_shop_id_and_shop_provider", unique: true
