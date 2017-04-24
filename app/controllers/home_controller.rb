@@ -25,10 +25,10 @@ class HomeController < ApplicationController
   end
 
   def insert
-    # food_words  = ['Yakiniku', 'Sukiyaki', 'Horumon', 'Steakhouses', 'Yakitori']
-    # place_words = Postalcode.where(city:'大阪府').pluck(:address)
-    food_words  = ['焼肉']
-    place_words = ['大阪駅']
+    food_words  = ['Yakiniku', 'Sukiyaki', 'Horumon', 'Steakhouses', 'Yakitori']
+    place_words = Postalcode.where(city:'大阪府').pluck(:address)
+    # food_words  = ['焼肉']
+    # place_words = ['大阪駅']
 
     food_words.each do |food_word|
       place_words.each do |place_word|
