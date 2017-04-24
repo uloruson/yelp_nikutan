@@ -8,6 +8,7 @@ $font-size:18px;
 @mixin ts-black($op:.3) {
   text-shadow: 2px -2px rgba(0, 0, 0, $op);
 }
+
 body{
   font-family: "Hannari";
   margin: 0;
@@ -175,14 +176,13 @@ dl.search dd button i{
 }
 
 .info{
+  // background-color: #F6F6F6;
   padding: 5px;
-  // width: 500px;
   .info-title{
     display: flex;
     font-size: $font-size;
     justify-content: space-between;
     align-items: center;
-    background-color: #DDD;
     p{
       font-size: $font-size * 0.75;
       padding-right: 5px;
@@ -194,27 +194,43 @@ dl.search dd button i{
   .info-main{
     display: flex;
     align-items: flex-start;
-    .info-img{
+    img{
+      width: 200px;
+      height: 200px;
+
     }
     .info-des{
       line-height: 1.5em;
       letter-spacing: 0.1em;
       margin-left: 1em;
-    }
-  }
-  .info-fotter{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .info-address{
       i{
         margin-right: 0.5rem;
         font-size: 1rem;
         vertical-align: middle;
       }
+
     }
 
+  }
+  .info-fotter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-
+    a{
+      // width:200px;
+      font-size: $font-size;
+      font-weight:bold;
+      text-decoration:none;
+      display:inline-block;
+      text-align:center;
+      padding:0($font-size * 2);
+      height: $font-size * 3;
+      line-height: $font-size * 3;
+      color:#fff;
+      background-color:$accent-color;
+      border-radius:4px;
+      box-shadow:1px 1px #1a6ea0;
+    }
   }
 }

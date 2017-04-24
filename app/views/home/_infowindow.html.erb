@@ -15,12 +15,6 @@
 
     <div class="info-des">
       <%= infoitem.description %>
-      <%= link_to "詳細はこちら", infoitem.url, target: "_blank" %>
-    </div>
-  </div>
-
-  <div class="info-fotter">
-    <div class="info-address">
       <p>
         <i class="fa fa-home" aria-hidden="true"></i>
         <%= infoitem.postal_code + "　" + infoitem.city + infoitem.address %>
@@ -30,6 +24,11 @@
         <%= infoitem.phone %>
       </p>
     </div>
+  </div>
+
+  <div class="info-fotter">
+    <%= link_to "詳細はこちら", infoitem.url, target: "_blank" %>
     <%= image_tag '/Yelp_trademark_RGB.png', style:"width: 100px;" %>
   </div>
+
 </div>
