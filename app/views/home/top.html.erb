@@ -1,7 +1,7 @@
 <section class="jumbotron">
   <div class="container">
-    <p>近いお肉のお店を探そう！</p>
-    <h1><%= image_tag 'logo-icon.png'%>nikutan</h1>
+    <p>近くのお肉のお店を探そう！</p>
+    <h1><%= image_tag '/logo-icon.png'%>nikutan</h1>
     <%= form_tag(search_path, method: "post", name: 'seach') do %>
       <dl class="search">
         <dt><%= text_field_tag(:q, "", :placeholder => '駅名や地名を入れてください') %></dt>

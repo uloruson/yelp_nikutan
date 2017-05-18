@@ -25,17 +25,17 @@ class HomeController < ApplicationController
   end
 
   def insert
-    food_words  = ['Yakiniku', 'Sukiyaki', 'Horumon', 'Steakhouses', 'Yakitori']
-    place_words = Postalcode.where(city:'大阪府').pluck(:address)
-    # food_words  = ['焼肉']
-    # place_words = ['大阪駅']
+    # food_words  = ['Yakiniku', 'Sukiyaki', 'Horumon', 'Steakhouses', 'Yakitori']
+    # place_words = Postalcode.where(city:'大阪府').pluck(:address)
+    food_words  = ['焼肉']
+    place_words = ['大阪駅']
 
     place_words.each do |place_word|
       food_words.each do |food_word|
         yelp_insert(food_word,place_word)
       end
     end
-    # redirect_to :action => "index"
+
   end
 
   private
@@ -74,33 +74,10 @@ class HomeController < ApplicationController
           }
 
           if shop = Shop.find_by(shop_id: item['id'])
-            puts shop.image_url
             shop.update(current_shop)
           else
             Shop.create(current_shop)
           end
-
-
-          # Shop.where(shop_id: item['id']).first_or_create do |shop|
-          #   shop.shop_provider  = 'yelp'
-          #   shop.shop_id        = item['id']
-          #   shop.name           = b_data['business']['name']
-          #   shop.phone          = b_data['business']['phone']
-          #   shop.review_count   = item['review_count']
-          #   shop.rating         = item['rating']
-          #   shop.rating_img_url = item['rating_img_url']
-          #   shop.description    = b_data['business']['snippet_text']
-          #   shop.url            = item['url']
-          #
-          #   # 画像末尾がms.jpgなら大きい画像のl.jpgに置換
-          #   shop.image_url      = item['image_url'].sub(/ms.jpg/, 'l.jpg') if item['image_url'].present?
-          #   shop.postal_code    = item['location']['postal_code']
-          #   shop.city           = item['location']['city']
-          #   shop.address        = item['location']['address'].join
-          #   shop.latitude       = item['location']['coordinate']['latitude']
-          #   shop.longitude      = item['location']['coordinate']['longitude']
-          # end
-
 
         end
       end

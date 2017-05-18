@@ -21,8 +21,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'devise'
 # gem 'omniauth-facebook'
 
-gem 'bootstrap-sass', '~> 3.3.6'
-# gem 'toastr-rails'
+# gem 'bootstrap-sass', '~> 3.3.6'
 
 
 # 定番デバッグgem
@@ -35,7 +34,6 @@ group :development, :test do
 end
 
 group :production do
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'pg'
   gem 'rails_12factor'
 end
